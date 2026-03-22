@@ -250,6 +250,37 @@
                     </aside>
                 </div>
             </section>
+               <section class="py-5" id="contact-form">
+                <div class="container px-5 my-5">
+                    <div class="row gx-5 justify-content-center">
+                        <div class="col-lg-8 col-xl-6">
+                            <div class="text-center mb-4">
+                                <h2 class="fw-bolder mb-2">Contáctanos</h2>
+                                <p class="text-muted mb-0">Déjanos tus datos y te responderemos pronto</p>
+                            </div>
+                            <form id="contactFormIndex" action="#" method="post">
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="fullName" name="fullName" type="text" placeholder="Ingresa un nombre y sus apellidos" required pattern="^(?:[A-Za-zÁÉÍÓÚáéíóúÜüÑñ]{2,})(?:\s+[A-Za-zÁÉÍÓÚáéíóúÜüÑñ]{2,}){2,}$" title="Ingresa un nombre y sus apellidos (mínimo 3 palabras)." />
+                                    <label for="fullName">Nombres y Apellidos</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="email" name="email" type="email" placeholder="nombre@correo.com" required />
+                                    <label for="email">Correo electrónico</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <input class="form-control" id="phone" name="phone" type="tel" placeholder="999999999" required pattern="^[0-9+()\-\s]{7,20}$" title="Ingresa un número de teléfono válido." />
+                                    <label for="phone">Número de teléfono</label>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <textarea class="form-control" id="message" name="message" placeholder="Escribe tu mensaje" style="height: 10rem"></textarea>
+                                    <label for="message">Mensaje</label>
+                                </div>
+                                <div class="d-grid">
+                                    <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
         </main>
         <!-- Footer-->
         <footer class="bg-dark py-4 mt-auto">
