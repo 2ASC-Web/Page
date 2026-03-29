@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+       <title>2ASC Administración</title>
+
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+
+    <!-- Bootstrap CSS -->
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <!-- ESTILOS PERSONALIZADOS -->
+    <style>
+        .hero-section {
+            background-image: url('assets/portada-2asc-2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+            min-height: 100vh;
+        }
+
+        /* Capa oscura */
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+        }
+
+        /* Contenido encima */
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Navbar transparente */
+        .navbar-custom {
+            background: transparent !important;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column h-100">
+<main class="flex-shrink-0">
+
+    <!-- HERO (NAVBAR + HEADER) -->
+    <div class="hero-section">
+
+        <!-- NAVBAR -->
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+            <div class="container px-3">
+                <a class="navbar-brand" href="index.html">
+                    <img src="assets/Logo2-ASC-t.png" alt="2ASC Administración" height="150">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html">Inicio</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html#features">Nosotros</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="servicios.html">Servicios</a></li>
+                        <li class="nav-item"><a class="nav-link text-white" href="index.html#contact-form">Contacto</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- HEADER -->
+        <header class="py-5">
+            <div class="container px-5 hero-content">
+                <div class="row gx-5 align-items-center">                  
+            </div>
+        </header>
+    </div>
+          <!-- Footer-->
+<footer class="bg-dark py-4 mt-auto">
+    <div class="container px-5">
+        <div class="row align-items-center text-center text-sm-start">
+        <!-- IZQUIERDA -->
+            <div class="col-sm-4 mb-2 mb-sm-0">
+                <div class="small m-0 text-white">
+                    Copyright &copy; 2ASC Company 2026
+                </div>
+            </div>
+        <!-- CENTRO (LOGO) -->
+            <div class="col-sm-4 text-center mb-2 mb-sm-0">
+                <img src="assets/Logo2-ASC-t.png" alt="2ASC Administración" style="height: 120px;">
+            </div>
+        <!-- DERECHA -->
+<div class="col-sm-4 text-sm-end">
+
+    <!-- TELÉFONO -->
+    <a class="link-light small me-3" href="tel:+51986363739">
+        <i class="bi bi-telephone-fill"></i> 986 363 739
+    </a>
+    <!-- WHATSAPP -->
+    <a class="link-light small me-3" href="https://wa.me/51986363739" target="_blank">
+        <i class="bi bi-whatsapp"></i> WhatsApp
+    </a>
+    <!-- FACEBOOK -->
+    <a class="link-light small" href="https://www.facebook.com/2ascperu/" target="_blank">
+        <i class="bi bi-facebook"></i> Facebook
+    </a>
+            </div>
+        </div>
+    </div>
+</footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+<!-- BOTÓN FLOTANTE -->
+<div id="whatsapp-button" onclick="toggleChat()">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</div>
+<!-- CHAT WHATSAPP -->
+<div id="whatsapp-chat">
+    <div class="header">
+        <span>WhatsApp</span>
+        <button onclick="toggleChat()">✕</button>
+    </div>
+    <div class="body">
+        <p><strong>Hola 👋</strong><br>¿En qué podemos ayudarte?</p>
+    </div>
+
+    <div class="footer">
+        <a href="https://wa.me/986363739" target="_blank">Abrir chat</a>
+    </div>
+</div>
+
+<style>
+/* BOTÓN */
+#whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+#whatsapp-button img {
+    width: 35px;
+}
+/* CHAT */
+#whatsapp-chat {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 300px;
+    background: #fff;
+    border-radius: 15px;
+    display: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+/* HEADER */
+#whatsapp-chat .header {
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#whatsapp-chat .header button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* BODY */
+#whatsapp-chat .body {
+    padding: 20px;
+    background: #f0f0f0;
+}
+
+#whatsapp-chat .body p {
+    background: white;
+    padding: 15px;
+    border-radius: 15px;
+    margin: 0;
+}
+
+/* FOOTER */
+#whatsapp-chat .footer {
+    padding: 15px;
+    text-align: right;
+}
+
+#whatsapp-chat .footer a {
+    background: #25D366;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+</style>
+
+<script>
+function toggleChat() {
+    var chat = document.getElementById("whatsapp-chat");
+    chat.style.display = (chat.style.display === "block") ? "none" : "block";
+}
+</script>                   
+    </body></html>
