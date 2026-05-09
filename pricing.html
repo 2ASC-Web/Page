@@ -1,84 +1,171 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-       <title>2ASC Administración</title>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Favicon-->
+    <title>2ASC Administración</title>
+
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
 
-    <!-- Bootstrap icons-->
+    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
 
     <!-- Bootstrap CSS -->
     <link href="css/styles.css" rel="stylesheet" />
 
-    <!-- ESTILOS PERSONALIZADOS -->
     <style>
-        .hero-section {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            overflow: hidden;
+        }
+
+        /* Fondo principal */
+        .hero-section{
             background-image: url('assets/portada-2asc-2.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
             position: relative;
             min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
         /* Capa oscura */
-        .hero-section::before {
+        .hero-section::before{
             content: "";
             position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
+            inset: 0;
+            background: rgba(0, 0, 0, 0.60);
         }
 
-        /* Contenido encima */
-        .hero-content {
+        /* Contenido sobre el overlay */
+        .hero-content{
             position: relative;
             z-index: 2;
         }
 
-        /* Navbar transparente */
-        .navbar-custom {
+        /* Navbar */
+        .navbar-custom{
             background: transparent !important;
+            padding-top: 20px;
+        }
+
+        /* Contenedor centrado */
+        .message-container{
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* Caja del mensaje */
+        .message-box{
+            max-width: 700px;
+            padding: 40px 30px;
+            border-radius: 18px;
+            backdrop-filter: blur(4px);
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .message-box h1{
+            color: #ffffff;
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .message-box p{
+            color: #f1f1f1;
+            font-size: 1.1rem;
+            font-weight: 400;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        /* Botón sutil */
+        .btn-home{
+            display: inline-block;
+            padding: 12px 28px;
+            border-radius: 50px;
+            text-decoration: none;
+            color: #ffffff;
+            border: 1px solid rgba(255,255,255,0.4);
+            background: rgba(255,255,255,0.08);
+            transition: all 0.3s ease;
+            font-size: 0.95rem;
+        }
+
+        .btn-home:hover{
+            background: #ffffff;
+            color: #000000;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px){
+
+            .message-box{
+                padding: 30px 20px;
+            }
+
+            .message-box h1{
+                font-size: 1.8rem;
+            }
+
+            .message-box p{
+                font-size: 1rem;
+            }
         }
     </style>
 </head>
-<body class="d-flex flex-column h-100">
-<main class="flex-shrink-0">
 
-    <!-- HERO (NAVBAR + HEADER) -->
+<body>
+
     <div class="hero-section">
 
         <!-- NAVBAR -->
-        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
-            <div class="container px-3">
+        <nav class="navbar navbar-expand-lg navbar-dark navbar-custom hero-content">
+            <div class="container px-4">
                 <a class="navbar-brand" href="index.html">
-                    <img src="assets/Logo2-ASC-t.png" alt="2ASC Administración" height="150">
+                    <img src="assets/Logo2-ASC-t.png" 
+                         alt="2ASC Administración" 
+                         height="120">
                 </a>
-                </div>
             </div>
         </nav>
-        <!-- HEADER -->
-        <header class="py-5">
-            <div class="container px-5 hero-content">
-                <div class="row gx-5 align-items-center">                  
-                    <!-- TEXTO -->
-                    <div class="col-lg-7">
-                        <div class="my-5 text-white">
-                            <h1 class="display-5 fw-bolder mb-3">
-                                ¡Gracias por tu respuesta!
-                            </h1>
-                        </div>
-                    </div>
-                </div>
+
+        <!-- MENSAJE CENTRAL -->
+        <div class="message-container hero-content">
+
+            <div class="message-box">
+
+                <h1>¡Gracias por contactarnos!</h1>
+
+                <p>
+                    ¡Gracias por su mensaje, en breve un asesor se pondrá en contacto contigo!
+                </p>
+
+                <a href="index.html" class="btn-home">
+                    <i class="bi bi-arrow-left"></i>
+                    Volver al inicio
+                </a>
+
             </div>
-        </header>
+
+        </div>
+
     </div>
- </body></html>
+
+</body>
+</html>
